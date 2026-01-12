@@ -1,0 +1,1 @@
+My first waybar attempt. 
