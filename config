@@ -1,0 +1,55 @@
+
+{
+  "position": "top",
+
+  "modules-left": ["tray",
+    "custom/keystrokes"
+  ],
+
+  "modules-center": [
+    "mpris"
+  ],
+
+  "modules-right": [
+    "pulseaudio",
+
+    "custom/notification",
+    "clock",
+
+  ],
+
+
+  "custom/keystrokes": {
+    "exec": "~/.config/waybar/scripts/keystrokes.sh",
+    "interval": 2,
+    "tooltip": false,
+    "format": "{}"
+},
+  "clock": {
+    "format": "󱑊 {:%H:%M}",
+    "format-alt": "󰃭 {:%a, %d %b}",
+    "tooltip-format": "<big>{:%Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+
+
+
+
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+
+  "mpris": {
+  "spacing": 5,
+    "format": "{player_icon} {title} | {artist}",
+    "format-paused": "Paused", /* "format-paused": "<i>{artist}</i>" */
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": ":3"
+    }
+  }
+}

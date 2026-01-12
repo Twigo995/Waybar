@@ -1,0 +1,149 @@
+@import "../../.config/waybar/colors.css";
+
+/* =========================
+ *   Global font
+ *   ========================= */
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+    font-size: 16px;
+    border: none;
+    padding: 0;
+}
+
+/* =========================
+ *   Waybar window
+ *   ========================= */
+window#waybar {
+    background: transparent;
+}
+
+/* =========================
+ *   Tooltip
+ *   ========================= */
+tooltip {
+    background: @background;
+    border: 1px solid @color4;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @foreground;
+    padding: 2px;
+}
+
+/* =========================
+ *   Workspaces
+ *   ========================= */
+#workspaces {
+background: @background;
+padding: 5px 6px;
+margin-left: 5px;
+border-radius: 18px;
+border: 0px solid @color4;
+animation: gradient_f 20s ease-in infinite;
+transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button {
+padding: 0px 5px;
+margin: 0 3px;
+border-radius: 999px;
+color: @color4;
+background: transparent;
+transition: all 0.25s ease;
+animation: gradient_f 20s ease-in infinite;
+}
+
+#workspaces button.active {
+background: @color4;
+color: @color4;
+min-width: 25px;
+}
+
+#workspaces button:hover {
+background: @color4;
+color: @background;
+min-width: 35px;
+}
+
+#workspaces button.urgent {
+background: @color1;
+color: @background;
+}
+
+/* =========================
+ *   Module islands
+ *   ========================= */
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#custom-notification {
+background: @background;
+color: @color4;
+padding: 4px 15px;
+margin-left: 5px;
+border-radius: 999px;
+border: 0px solid @color4;
+}
+
+#network {
+color: @color4;
+}
+
+#battery {
+color: @color3;
+}
+
+#clock {
+color: @color5;
+}
+
+/* =========================
+ *   Custom Power module
+ *   ========================= */
+#custom-power {
+color: @color1;
+background-color: @background; /* keep your original style */
+min-width: 50px;
+border-radius: 999px;
+border: 0px solid @color1;
+margin-left: 5px; /* fix spacing from battery */
+}
+
+/* =========================
+ *   Tray
+ *   ========================= */
+#tray {
+background-color: @background;
+color: @foreground;
+border-radius: 18px;
+min-width: 70px;
+margin-left: 5px;
+border: 0px solid @color4;
+}
+/*
+ =========================
+ *   Optional MPRIS
+ *   ========================= */
+
+#mpris {
+background: @background;
+color: @color4;
+padding: 4px 15px;
+margin-left: 5px;
+border-radius: 999px;
+border: 0px solid @color4;
+min-width: 80px;
+ }
+
+#custom-keystrokes
+ {
+     background: @background;
+     color: @color4;
+     padding: 4px 15px;
+     margin-left: 5px;
+     border-radius: 999px;
+     border: 0px solid @color4;
+     min-width: 80px;
+ }
